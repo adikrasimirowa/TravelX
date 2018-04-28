@@ -20,6 +20,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(startIntent);
             }
         });
+        
+        
+         ImageView imageView = (ImageView) findViewById(R.id.imageView);
+        Glide.with(MainActivity.this)
+                .load(R.drawable.bg)
+                .asGif()
+                .placeholder(R.drawable.bg)
+                .crossFade()
+                .into(imageView);
 
     }
 
